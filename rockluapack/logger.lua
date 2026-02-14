@@ -30,6 +30,15 @@ end
 
 local succes, message = xpcall(outer, errorHandler)
 print(message)
+
+local status, result = pcall(divide, 10, 0)
+if status then
+    print("Result:", result)
+else
+    logger.log("error", "Caught division error: " .. result)
+end
+
 	
 return logger
+
 
