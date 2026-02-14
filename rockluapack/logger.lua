@@ -1,7 +1,8 @@
 -- logger.lua
+-- this is v1 now instead of protoype
 local logger = {}
 
-logger._VERSION = "prototype"
+logger._VERSION = "V1"
 logger._AUTHOR = "VB"
 logger._DESCRIPTION = "A logging module"
 
@@ -14,4 +15,21 @@ function logger.log(level, message)
 	 print(output)
 end
 
+local function errorHandler(err)
+	local trace = debug.traceback(err, 2)
+	return trace
+end
+
+local function inner()
+	error("Something went wrong")
+end
+
+local function outer()
+	inner()
+end
+
+local succes, message = xpcall(outer, errorHandler)
+print(message)
+	
 return logger
+
