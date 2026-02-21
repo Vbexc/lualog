@@ -1,5 +1,6 @@
 package = "logger"
 version = "1.0-1"
+tag = "v1.1.1"
 source = {
     url = "file://./logger.lua"
 }
@@ -14,3 +15,4 @@ build = {
         logger = "logger.lua"
     }
 }
+
