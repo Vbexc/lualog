@@ -7,7 +7,7 @@ logger._AUTHOR = "VB"
 logger._DESCRIPTION = "A logging module"
 
 logger.level = "info"
-logger.outputFile = nil
+logger.outputFile = "logs.txt"
 
 function logger.log(level, message)
      local timestamp = os.date("%Y-%m-%d %H:%M:%S")
@@ -40,5 +40,6 @@ end
 
 	
 return logger
+
 
 
