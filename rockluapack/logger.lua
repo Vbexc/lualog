@@ -14,9 +14,5 @@ function logger.log(level, message)
 	 local output = string.format("[%s] [%s] %s", timestamp, level, message)
 	 print(output)
 end
-	
+
 return logger
-
-
-
-
